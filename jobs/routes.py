@@ -52,7 +52,7 @@ def view_jobs():
 
 @jobs_bp.route('/apply/<string:title>', methods=['GET', 'POST'])
 def apply_job(title):
-    if session.get('role') != 'Job Seeker':
+    if session.get('role') != 'Iam a Job Seeker':
         flash("Only Job Seekers can apply for jobs.")
         return redirect(url_for('auth.login'))
 
